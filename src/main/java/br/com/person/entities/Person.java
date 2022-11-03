@@ -1,13 +1,15 @@
 package br.com.person.entities;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Person {
 
     @Id
@@ -16,5 +18,4 @@ public class Person {
 
     @Embedded
     private BasicPerson person;
-
 }
