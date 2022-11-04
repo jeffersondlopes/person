@@ -8,6 +8,8 @@ import javax.persistence.Transient;
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class BasicPerson {
 
