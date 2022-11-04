@@ -1,9 +1,6 @@
 package br.com.person.entities;
 
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Transient;
@@ -11,6 +8,7 @@ import javax.persistence.Transient;
 @Getter
 @Setter
 @Builder
+@ToString
 public class BasicPerson {
 
     @Column(name = "NAME")
