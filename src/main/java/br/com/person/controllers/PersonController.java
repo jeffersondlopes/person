@@ -5,11 +5,13 @@ import br.com.person.dto.request.PersonRequest;
 import br.com.person.dto.response.PersonResponse;
 import br.com.person.entities.Person;
 import br.com.person.services.PersonServices;
-import br.com.person.utils.PersonMapper;
+import br.com.person.utils.mapper.PersonMapper;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/v1/person")
@@ -24,7 +26,7 @@ public class PersonController {
     }
 
     @PostMapping
-    public PersonResponse save(@RequestBody  PersonRequest personRequest) {
+    public PersonResponse save(@RequestBody @Valid PersonRequest personRequest) {
         Person person = personServices.save(mapper.toPerson(personRequest));
         return mapper.toPersonResponde(person);
     }
