@@ -24,7 +24,7 @@ public interface PersonMapper {
     @Mapping(source = "person.name", target = "name")
     @Mapping(source = "person.shortName", target = "shortName")
     @Mapping(source = "person.documentNumber", target = "documentNumber")
-    @Mapping(source = "person.typePerson", target = "typePersonId")
+    @Mapping(source = "person.typePerson", target = "typePerson")
     @Mapping(source = "person.EMail", target = "eMail")
     PersonResponse toPersonResponde(Person person);
 
