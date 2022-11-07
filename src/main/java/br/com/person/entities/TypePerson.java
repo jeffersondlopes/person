@@ -1,10 +1,12 @@
 package br.com.person.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 
 import java.util.Arrays;
 
 @Getter
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum TypePerson {
 
     PF(1,"FISICA"),
